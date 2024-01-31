@@ -1,0 +1,22 @@
+CREATE TABLE `category` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(50) NOT NULL
+);
+
+
+CREATE TABLE `user` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `email` VARCHAR(150) NOT NULL,
+  `hashed_password` VARCHAR(255) NOT NULL,
+  `is_admin` BOOLEAN NOT NULL DEFAULT 0
+);
+
+CREATE TABLE `product` (
+  `id` INT AUTO_INCREMENT PRIMARY KEY,
+  `name` VARCHAR(150) NOT NULL,
+  `quantity` INT NOT NULL,
+  `price` INT NOT NULL,
+  `is_fav` BOOLEAN NOT NULL DEFAULT 0,
+  `category_id` INT NOT NULL,
+  FOREIGN KEY(category_id) REFERENCES category(id) ON DELETE CASCADE
+);
