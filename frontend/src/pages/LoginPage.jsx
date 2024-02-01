@@ -13,7 +13,7 @@ export default function LoginPage() {
     axios
       .post(`${import.meta.env.VITE_BACKEND_URL}/api/auth`, data)
       .then((res) => setUser(res.data));
-    navigate("/");
+    navigate("/products");
   };
   return (
     <div

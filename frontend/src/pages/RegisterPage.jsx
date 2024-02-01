@@ -12,14 +12,14 @@ export default function RegisterPage() {
     formState: { errors },
   } = useForm();
 
-  // register est utilisé pour enregistrer les inputs,
+  // register pour enregistrer les inputs,
   // handleSubmit pour gérer la soumission du formulaire,
   // watch pour observer les valeurs des champs du formulaire,
   // errors pour gérer les erreurs de validation du formulaire.
 
   const navigate = useNavigate();
 
-  // useNavigate est un hook de react-router-dom qui permet de naviguer programmablement entre les pages.
+  // useNavigate pour naviguer entre les pages
 
   const onSubmit = async (data) => {
     if (data.password !== data.confirmPassword) {

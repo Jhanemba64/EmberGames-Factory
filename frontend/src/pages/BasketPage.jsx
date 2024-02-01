@@ -23,9 +23,7 @@ export default function BasketPage() {
             >
               <h3 className="text-xl font-semibold">
                 {item.nameProduct}{" "}
-                <span className="text-gray-600">
-                  (Quantité: {item.quantity})
-                </span>
+                <span className="text-gray-600">(x {item.quantity})</span>
               </h3>
               <div>
                 <h4 className="text-lg font-semibold">
@@ -35,7 +33,7 @@ export default function BasketPage() {
               <button
                 type="button"
                 onClick={() => removeFromBasket(item.id)}
-                className="bg-red-500 text-white px-4 py-2 mt-4 md:mt-0 rounded hover:bg-red-600 transition duration-300"
+                className="bg-red-500 text-white px-4 py-2 mt-4 md:mt-0 rounded hover:bg-red-800 transition duration-300"
               >
                 Supprimer
               </button>

@@ -1,3 +1,5 @@
+/* eslint-disable */
+
 import React from "react";
 import ReactDOM from "react-dom/client";
 import axios from "axios";
@@ -8,7 +10,9 @@ import ProductsPage from "./pages/ProductsPage";
 import LoginPage from "./pages/LoginPage";
 import RegisterPage from "./pages/RegisterPage";
 import BasketPage from "./pages/BasketPage";
-import BasketProvider from "./context/BasketContext";
+import NotFoundPage from "./pages/NotFoundPage";
+import FavoritList from "./pages/FavoritList";
+import Contacts from "./pages/Contacts";
 
 const router = createBrowserRouter([
   {
@@ -50,11 +54,19 @@ const router = createBrowserRouter([
           return data;
         },
       },
+      {
+        path: "/favoris",
+        element: <FavoritList />,
+      },
+      {
+        path: "/contact",
+        element: <Contacts />,
+      },
+      {
+        path: "*",
+        element: <NotFoundPage />,
+      },
     ],
-  },
-  {
-    path: "*",
-    element: <p> 404 </p>, // A ne pas oublier,
   },
 ]);
 
@@ -62,8 +74,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 
 root.render(
   <React.StrictMode>
-    <BasketProvider>
-      <RouterProvider router={router} />
-    </BasketProvider>
+    <RouterProvider router={router} />
   </React.StrictMode>
 );

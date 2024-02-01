@@ -12,7 +12,7 @@ export default function BasketProvider({ children }) {
     // Vérifie si le produit est déja dans le panier
     const existingProduct = basket.find((item) => item.id === product.id);
     if (existingProduct) {
-      // Mettre à jour la quantité
+      // Met à jour la quantité
       setBasket(
         basket.map((item) =>
           item.id === product.id
@@ -21,7 +21,7 @@ export default function BasketProvider({ children }) {
         )
       );
     } else {
-      // Ajouter le nouveau produit avec quantity 1
+      // Ajouter le nouveau produit avec quantity à 1
       setBasket([...basket, { ...product, quantity: 1, price: product.price }]);
     }
   };

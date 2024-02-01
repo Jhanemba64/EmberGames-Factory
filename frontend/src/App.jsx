@@ -2,6 +2,8 @@ import { Outlet } from "react-router-dom";
 import { useState } from "react";
 import NavBar from "./components/Navbar";
 import "./index.css";
+import BasketProvider from "./context/BasketContext";
+import FavoritProvider from "./context/FavoritContext";
 
 function App() {
   const [user, setUser] = useState("");
@@ -16,10 +18,14 @@ function App() {
           title="Video background"
         />
       </div>
-      <div className="relative ">
-        <NavBar user={user} setUser={setUser} />
-        <Outlet context={{ user, setUser }} />
-      </div>
+      <FavoritProvider>
+        <BasketProvider>
+          <div className="relative ">
+            <NavBar user={user} setUser={setUser} />
+            <Outlet context={{ user, setUser }} />
+          </div>
+        </BasketProvider>
+      </FavoritProvider>
     </div>
   );
 }

@@ -37,6 +37,7 @@
   },
   "dependencies": {
     "react-hook-form": "^7.49.3",
+    "react-responsive-carousel": "^3.2.23",
     "react-slick": "^0.30.1",
     "slick-carousel": "^1.8.1"
   }
