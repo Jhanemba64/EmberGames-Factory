@@ -13,8 +13,8 @@ export default function Contacts() {
             <p className="mb-4">
               Si vous avez des questions ou si vous souhaitez démarrer un projet
               ensemble, n'hésitez pas à nous contacter. Nous serions ravis de
-              discuter de la manière dont nous pouvons vous aider à réaliser vos
-              ou pour tout simplement faire connaissance.
+              discuter de la manière dont nous pouvons vous aider à les
+              réaliser, ou pour tout simplement faire connaissance.
             </p>
             <ul>
               <li className="mb-2">
@@ -22,11 +22,11 @@ export default function Contacts() {
                 pierrick.onchalo@gmail.com
               </li>
               <li className="mb-2">
-                <span className="font-semibold">Téléphone:</span> +1 234 567 890
+                <span className="font-semibold">Téléphone:</span> +33 667258954
               </li>
               <li>
-                <span className="font-semibold">Adresse:</span> 123 Rue
-                Imaginaire, Royaume des trucs
+                <span className="font-semibold">Adresse:</span> 59 route de
+                Pitoys, 64600 Anglet
               </li>
             </ul>
           </div>
